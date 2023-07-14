@@ -2,9 +2,11 @@ package com.example.suitmedia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editTextKalimat;
     private Button buttonCheck;
+    private Button next_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 buttonCheck.setEnabled(editable.length() > 0);
+            }
+        });
+
+        next_button = findViewById(R.id.buttonNext);
+        next_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, activity_screen2.class);
+                startActivity(intent);
             }
         });
     }
