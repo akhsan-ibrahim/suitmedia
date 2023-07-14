@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class activity_screen2 extends AppCompatActivity {
 
     private TextView textViewName;
+    private Button button_chooseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +24,14 @@ public class activity_screen2 extends AppCompatActivity {
         String name = intent.getStringExtra("name");
 
         textViewName.setText(name);
+
+        button_chooseUser = findViewById(R.id.buttonChooseUser);
+        button_chooseUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity_screen2.this, activity_screen3.class);
+                startActivity(intent);
+            }
+        });
     }
 }
