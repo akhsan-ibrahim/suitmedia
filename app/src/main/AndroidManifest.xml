@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--data api-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,10 +15,10 @@
         android:theme="@style/Theme.Suitmedia"
         tools:targetApi="31">
         <activity
-            android:name=".activity_screen3"
+            android:name=".Screen3Activity"
             android:exported="false" />
         <activity
-            android:name=".activity_screen2"
+            android:name=".Screen2Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

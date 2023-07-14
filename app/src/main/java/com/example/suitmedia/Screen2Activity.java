@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class activity_screen2 extends AppCompatActivity {
+public class Screen2Activity extends AppCompatActivity {
 
     private TextView textViewName;
     private Button button_chooseUser;
@@ -29,7 +29,7 @@ public class activity_screen2 extends AppCompatActivity {
         button_chooseUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_screen2.this, activity_screen3.class);
+                Intent intent = new Intent(Screen2Activity.this, Screen3Activity.class);
                 startActivity(intent);
             }
         });

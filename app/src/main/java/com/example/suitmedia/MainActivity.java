@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextKalimat;
@@ -64,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = editTextName.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this, activity_screen2.class);
+                Intent intent = new Intent(MainActivity.this, Screen2Activity.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
             }
