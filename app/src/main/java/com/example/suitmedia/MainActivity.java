@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextKalimat;
     private Button buttonCheck;
     private Button next_button;
+    private EditText editTextName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +57,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        editTextName = findViewById(R.id.textName);
         next_button = findViewById(R.id.buttonNext);
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = editTextName.getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, activity_screen2.class);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
         });
